@@ -23,8 +23,8 @@ const CONFIG = {
   // Vercel (built-in): "/api/contact"  (requires RESEND_API_KEY env var)
   // Formspree:          "https://formspree.io/f/yourFormId"
   // Web3Forms:          "https://api.web3forms.com/submit"  (also set formAccessKey)
-  formEndpoint: "/api/contact",
-  formAccessKey: ""
+  formEndpoint: "https://api.web3forms.com/submit",
+  formAccessKey: "a6b67e54-a307-4351-807e-591850dcc5f1"
 };
 
 const STATS = [
