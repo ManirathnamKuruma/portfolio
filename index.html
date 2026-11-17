@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mani Kuruma — Full-Stack Developer & AI Engineer</title>
+  <meta name="description" content="Premium personal portfolio of Mani Kuruma, Full-Stack Developer & AI Engineer.">
+  <meta property="og:title" content="Mani Kuruma — Portfolio">
+  <meta property="og:description" content="Building Intelligent Solutions Through Technology & Creativity.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/profile-hero.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>AM</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0A0A0F',
+            bg2: '#11111A',
+            ink: '#F5F5F7',
+            muted: '#A1A1AA',
+            violet: '#7C3AED',
+            blue: '#2563EB'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-bg text-ink antialiased">
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition bg-bg/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2">
+        <span id="logo-text" class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center font-bold text-white text-xs">AM</span>
+        <span id="brand-name" class="font-display font-semibold">Mani Kuruma</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#home" class="nav-link text-sm text-zinc-300 hover:text-white transition">Home</a>
+        <a href="#about" class="nav-link text-sm text-zinc-300 hover:text-white transition">About</a>
+        <a href="#skills" class="nav-link text-sm text-zinc-300 hover:text-white transition">Skills</a>
+        <a href="#experience" class="nav-link text-sm text-zinc-300 hover:text-white transition">Experience</a>
+        <a href="#projects" class="nav-link text-sm text-zinc-300 hover:text-white transition">Projects</a>
+        <a href="#publications" class="nav-link text-sm text-zinc-300 hover:text-white transition">Publications</a>
+        <a href="#patents" class="nav-link text-sm text-zinc-300 hover:text-white transition">Patents</a>
+        <a href="#certifications" class="nav-link text-sm text-zinc-300 hover:text-white transition">Certifications</a>
+        <a href="#contact" class="nav-link text-sm text-zinc-300 hover:text-white transition">Contact</a>
+      </nav>
+      <button id="hamburger" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/10" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="closed md:hidden bg-bg2/95 backdrop-blur border-t border-white/5">
+      <div class="px-5 py-3 flex flex-col gap-1">
+        <a href="#home" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Home</a>
+        <a href="#about" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">About</a>
+        <a href="#skills" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Skills</a>
+        <a href="#experience" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Experience</a>
+        <a href="#projects" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Projects</a>
+        <a href="#publications" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Publications</a>
+        <a href="#patents" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Patents</a>
+        <a href="#certifications" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Certifications</a>
+        <a href="#contact" class="mobile-link px-3 py-2 rounded-lg hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full"></canvas>
+    <div class="max-w-7xl mx-auto px-5 md:px-8 w-full grid lg:grid-cols-2 gap-12 items-center pt-24">
+      <div class="relative z-10">
+        <span id="availability" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-xs mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for Opportunities
+        </span>
+        <h1 class="font-display text-5xl md:text-7xl font-bold leading-[1.05] mb-4">
+          Hi, I'm <span id="hero-name" class="gradient-text">Mani Kuruma</span>
+        </h1>
+        <h2 id="hero-title" class="text-2xl md:text-3xl text-zinc-300 font-medium mb-6">Full-Stack Developer & AI Engineer</h2>
+        <p id="hero-tagline" class="text-lg text-zinc-400 max-w-xl mb-8">Full-Stack Developer & AI Engineer crafting premium digital experiences, scalable systems, and intelligent applications.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-full bg-gradient-to-r from-violet-600 to-blue-600 font-medium hover:opacity-90 transition">View Work</a>
+          <a id="resume-btn" href="#" class="px-6 py-3 rounded-full border border-white/15 hover:border-violet-500/50 transition">Download Resume</a>
+        </div>
+        <div class="flex items-center gap-4 mt-10">
+          <a href="#" class="social-github w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-violet-500/50 hover:text-violet-300 transition"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-linkedin w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-violet-500/50 hover:text-violet-300 transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-twitter w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-violet-500/50 hover:text-violet-300 transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-dribbble w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-violet-500/50 hover:text-violet-300 transition"><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+      </div>
+      <div class="relative reveal-right">
+        <div class="img-frame">
+          <div class="relative rounded-[28px] overflow-hidden border border-white/10 bg-bg2">
+            <img src="assets/images/profile-hero.png" alt="Profile photo" class="w-full aspect-[4/5] object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal-left">
+          <div class="relative rounded-3xl overflow-hidden border border-white/10">
+            <img src="assets/images/profile-about.png" alt="About photo" class="w-full aspect-[4/5] object-cover">
+          </div>
+        </div>
+        <div class="reveal-right">
+          <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">About Me</span>
+          <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 mb-6">Crafting digital experiences with purpose.</h2>
+          <p class="text-zinc-400 mb-4 leading-relaxed">I’m an Assistant Professor and Vibe Coder who loves building products where elegant design meets intelligent functionality. From web development to machine learning and Large Language Models, I’ve worked across the stack of modern tech, and these days I’m deep into Agentic AI. I’m always up for collaborating with tech enthusiasts.</p>
+          <p class="text-zinc-400 mb-8 leading-relaxed"><strong class="text-white">Philosophy:</strong> Technology should amplify human potential — not complicate it.</p>
+          <div class="grid grid-cols-2 gap-3 mb-8">
+            <div class="text-sm"><span class="text-zinc-500">Location:</span> <span class="text-zinc-200">Hyderabad, India</span></div>
+            <div class="text-sm"><span class="text-zinc-500">Focus:</span> <span class="text-zinc-200">Web & AI</span></div>
+            <div class="text-sm"><span class="text-zinc-500">Email:</span> <a class="email-link text-violet-300" href="#">hello@example.com</a></div>
+            <div class="text-sm"><span class="text-zinc-500">Status:</span> <span class="text-emerald-300">Open to work</span></div>
+          </div>
+          <div id="stats-wrap" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 relative bg-bg2/50">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Skills</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Technologies I work with</h2>
+        <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">A curated set of tools and technologies I use to design, build, and ship products.</p>
+      </div>
+      <div id="skills-wrap" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 relative">
+    <div class="max-w-5xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Experience</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Journey so far</h2>
+      </div>
+      <div id="experience-wrap"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 relative bg-bg2/50">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-10 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Projects</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Featured work</h2>
+        <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">A selection of projects showcasing my range across web, AI, and full-stack development.</p>
+      </div>
+      <div id="project-filters" class="flex flex-wrap justify-center gap-2 mb-10"></div>
+      <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Services</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">What I do</h2>
+      </div>
+      <div id="services-wrap" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="py-24 relative bg-bg2/50">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Publications</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Published research</h2>
+        <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">Selected papers and research contributions.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-book text-violet-300"></i></div>
+            <div>
+              <h3 class="font-semibold mb-1">Real-Time Monitor RTMS System over Text Streams</h3>
+              <a href="https://www.ijmert.org/Publications/IJMERT-Vol-5-Issue-3-0028.pdf" target="_blank" rel="noopener" class="text-sm text-violet-300 mt-3 inline-block hover:underline">Read Paper →</a>
+            </div>
+          </div>
+        </div>
+        <div class="card p-6 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-book text-violet-300"></i></div>
+            <div>
+              <h3 class="font-semibold mb-1">Secure GovCloud: Enhancing Security, Scalability, and Reliability in E-Governance Systems through Advanced Cloud Security Mechanisms</h3>
+              <a href="https://ijritcc.org/index.php/ijritcc/article/view/10807" target="_blank" rel="noopener" class="text-sm text-violet-300 mt-3 inline-block hover:underline">Read Paper →</a>
+            </div>
+          </div>
+        </div>
+        <div class="card p-6 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-book text-violet-300"></i></div>
+            <div>
+              <h3 class="font-semibold mb-1">DRISHTIKON-P: A Multilingual Dataset for Evaluating Semantic Consistency in Indic Vision Language Models</h3>
+              <a href="https://ieeexplore.ieee.org/document/11649139" target="_blank" rel="noopener" class="text-sm text-violet-300 mt-3 inline-block hover:underline">Read Paper →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATENTS -->
+  <section id="patents" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Patents</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Intellectual property</h2>
+        <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">Patents and inventions.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6 reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-lightbulb text-violet-300"></i></div>
+            <div>
+              <h3 class="font-semibold mb-1">System and method for providing outsource provider commerce information on host web pages offering commercial opportunities</h3>
+              <p class="text-sm text-zinc-400 mb-2">Patent Publication Date: 07/08/2026</p>
+              <p class="text-sm text-zinc-400 mb-2">Journal No. 32/2026 &nbsp; Part I &nbsp; Page No. 1942 — <a href="https://search.ipindia.gov.in/IPOJournal/Journal/patent" target="_blank" rel="noopener" class="text-violet-300 hover:underline">IPO Journal</a></p>
+              <p class="text-sm text-zinc-500">This invention relates to the development of a system and method that allows incorporating commerce information about outsource providers right into the web pages provided by the host which offer commercial opportunities. Typically, the users interested in outsourced services have to switch from the host website to other external sites of the providers, which leads to user dissatisfaction and results in no conversions at all. The system employs a dynamic data integration module that will allow receiving up-to-date information about available services, prices, availability, and ratings of providers in the centralized database of outsource providers. The commerce information will be displayed in the user interface of the host web page. The method keeps users engaged and makes it possible to maximize the revenue for the host through improving user experience and providing leads for the outsource providers.</p>
+              <a href="https://drive.google.com/file/d/1zjBSaJptMI8ohb9wOZXmXfM5mUQwt1Mb/view?usp=sharing" target="_blank" rel="noopener" class="text-sm text-violet-300 mt-3 inline-block hover:underline">View Patent →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="py-24 relative bg-bg2/50">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Certifications</span>
+        <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Professional certifications</h2>
+        <p class="text-zinc-400 mt-4 max-w-2xl mx-auto">Industry-recognized credentials that validate my skills.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6 reveal flex gap-4 items-start">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-certificate text-violet-300"></i></div>
+          <div>
+            <h3 class="font-semibold mb-1">Data Scientist Master's Program Certification</h3>
+            <p class="text-sm text-zinc-400">Simplilearn</p>
+          </div>
+        </div>
+        <div class="card p-6 reveal flex gap-4 items-start">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-certificate text-violet-300"></i></div>
+          <div>
+            <h3 class="font-semibold mb-1">Business Analytics Master's Program Certification</h3>
+            <p class="text-sm text-zinc-400">iNeuron</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div class="reveal-left">
+          <span class="text-violet-400 text-sm font-medium tracking-widest uppercase">Contact</span>
+          <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 mb-6">Let's build something great together.</h2>
+          <p class="text-zinc-400 mb-8 leading-relaxed">Have a project in mind, a question, or just want to say hi? I'd love to hear from you. Reach out via email or the form.</p>
+          <div class="space-y-4">
+            <a class="email-link flex items-center gap-4 card p-4 hover:no-underline" href="#">
+              <div class="w-11 h-11 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-solid fa-envelope text-violet-300"></i></div>
+              <div>
+                <div class="text-xs text-zinc-500">Email</div>
+                <div class="text-sm">hello@example.com</div>
+              </div>
+            </a>
+            <a href="#" class="social-linkedin flex items-center gap-4 card p-4">
+              <div class="w-11 h-11 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-brands fa-linkedin-in text-violet-300"></i></div>
+              <div>
+                <div class="text-xs text-zinc-500">LinkedIn</div>
+                <div class="text-sm">linkedin.com/in/manirathnam-kuruma</div>
+              </div>
+            </a>
+            <a href="#" class="social-github flex items-center gap-4 card p-4">
+              <div class="w-11 h-11 rounded-xl bg-violet-600/20 border border-violet-500/20 flex items-center justify-center"><i class="fa-brands fa-github text-violet-300"></i></div>
+              <div>
+                <div class="text-xs text-zinc-500">GitHub</div>
+                <div class="text-sm">github.com/ManirathnamKuruma</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <form id="contact-form" class="card p-8 space-y-5">
+            <div>
+              <label for="cf-name" class="block text-sm mb-2 text-zinc-300">Name</label>
+              <input id="cf-name" type="text" required class="input w-full px-4 py-3" placeholder="Your name">
+            </div>
+            <div>
+              <label for="cf-email" class="block text-sm mb-2 text-zinc-300">Email</label>
+              <input id="cf-email" type="email" required class="input w-full px-4 py-3" placeholder="you@example.com">
+            </div>
+            <div>
+              <label for="cf-subject" class="block text-sm mb-2 text-zinc-300">Subject</label>
+              <input id="cf-subject" type="text" class="input w-full px-4 py-3" placeholder="Project inquiry">
+            </div>
+            <div>
+              <label for="cf-message" class="block text-sm mb-2 text-zinc-300">Message</label>
+              <textarea id="cf-message" rows="5" required class="input w-full px-4 py-3 resize-none" placeholder="I need the service/mentoring for..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-full bg-gradient-to-r from-violet-600 to-blue-600 font-medium hover:opacity-90 transition">Send Message</button>
+            <p id="form-status" class="text-sm"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-blue-600 flex items-center justify-center font-bold text-white text-xs">AM</span>
+          <span class="text-sm text-zinc-400">© <span id="year"></span> Mani Kuruma. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-4 text-zinc-400">
+          <a href="#" class="social-github hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-linkedin hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-twitter hover:text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-dribbble hover:text-white transition"><i class="fa-brands fa-dribbble"></i></a>
+        </div>
+        <div class="flex items-center gap-4 text-sm text-zinc-500">
+          <a href="#home" class="hover:text-white transition">Home</a>
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#projects" class="hover:text-white transition">Projects</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-gradient-to-br from-violet-600 to-blue-600 text-white shadow-lg flex items-center justify-center z-40" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
